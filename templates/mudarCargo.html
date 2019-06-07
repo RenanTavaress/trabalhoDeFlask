@@ -1,0 +1,25 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <h1>Mudar Cargo</h1>
+    <hr>
+        <form action="{{url_for('cadastro')}}" method="POST">
+            <table>
+                <tr>
+                    <td>Cargo</td>
+                    <td><input type="text" name ="cargo" required></td>
+                </tr>
+                
+                <br>
+            </table>
+            <a href="/delete_Cargo/{{ cargo }}" >Delete</a>
+
+        </form>
+    
+</body>
+</html>

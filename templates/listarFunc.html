@@ -1,0 +1,42 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pessoas Cadastradas</title>
+</head>
+<body>
+    <table border = "1">
+        <tr>
+            <th>Matricula</th>
+            <th>Nome</th>
+            <th>Telefone</th>
+            <th>Cpf</th>
+            <th>Email</th>
+            <th>Cargo</th>
+            </tr>
+            {% for pessoa in userDetails%}
+            <tr>
+                <td>{{pessoa[5]}}</td>
+                <td>{{pessoa[0]}}</td>
+                <td>{{pessoa[1]}}</td>
+                <td>{{pessoa[2]}}</td>
+                <td>{{pessoa[3]}}</td>
+                <td>{{pessoa[4]}}</td>
+                <td>
+                <form action="/delete_Cargo/{{pessoa[5]}}" method="post">
+                        <button type="submit">deletar</button>    
+
+                </form>
+                <form action="/atualizar_Cargo/{{pessoa[5]}}" method="get">
+                    <button type="submit">edit</button>    
+
+            </form>
+                
+                </td>
+            </tr>
+            {% endfor %}
+    </table>
+    
+</body>
+</html>
